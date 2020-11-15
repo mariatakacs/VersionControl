@@ -5,37 +5,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using week08_i32vv1.Abstractions;
 
 namespace week08_i32vv1
 {
-    public class Ball : Label
+    public class Ball : Toy
     {
-        public Ball()
+        public SolidBrush BallColor { get; private set; }
+
+        public Ball(Color color)
         {
-            AutoSize = false;
-            Width = 50;
-            Height = Width;
-            Paint += Ball_Paint;
+            BallColor = new SolidBrush(color);
         }
 
-        private void Ball_Paint(object sender, PaintEventArgs e)
+        protected override void DrawImage(Graphics g)
         {
-            DrawImage(e.Graphics);
-        }
-
-        private void DrawImage(Graphics graphics)
-        {
-            throw new NotImplementedException();
-        }
-
-        protected void DrawImage(Graphics g)
-        {
-            g.FillEllipse(new SolidBrush(Color.Blue), 0, 0, Width, Height);
-        }
-
-        public void MoveBall()
-        {
-            Left += 1;
+            g.FillEllipse(BallColor, 0, 0, Width, Height);
         }
     }
 }
