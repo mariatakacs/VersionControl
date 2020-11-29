@@ -15,26 +15,6 @@ namespace Worlds_Hardest_Game
     {
         GameController gc = new GameController();
         GameArea ga;
-        Brain winnerBrain = null;
-
-        // ...
-
-        private void Gc_GameOver(object sender)
-        {
-            // ...
-
-            var winners = from p in topPerformers
-                          where p.IsWinner
-                          select p;
-            if (winners.Count() > 0)
-            {
-                winnerBrain = winners.FirstOrDefault().Brain.Clone();
-                gc.GameOver -= Gc_GameOver;
-                return;
-            }
-
-            // ...
-        }
 
         public Form1()
         {
@@ -101,5 +81,29 @@ namespace Worlds_Hardest_Game
             ga.Focus();
             gc.Start(true);
         }
+
+        Brain winnerBrain = null;
+
+        // ...
+
+        private void Gc_GameOver(object sender)
+        {
+            // ...
+
+            var winners = from p in topPerformers
+                          where p.IsWinner
+                          select p;
+            if (winners.Count() > 0)
+            {
+                winnerBrain = winners.FirstOrDefault().Brain.Clone();
+                gc.GameOver -= Gc_GameOver;
+                return;
+            }
+
+            // ...
+        }
+
+
+
     }
 }
