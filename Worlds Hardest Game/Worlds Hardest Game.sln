@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Worlds Hardest Game", "Worlds Hardest Game\Worlds Hardest Game.csproj", "{EBFB3FDF-BE13-4C24-BC8E-C14E100DF81F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EBFB3FDF-BE13-4C24-BC8E-C14E100DF81F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBFB3FDF-BE13-4C24-BC8E-C14E100DF81F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBFB3FDF-BE13-4C24-BC8E-C14E100DF81F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBFB3FDF-BE13-4C24-BC8E-C14E100DF81F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {854274E6-FE9B-4964-A37C-6763AF63E429}
+	EndGlobalSection
+EndGlobal
