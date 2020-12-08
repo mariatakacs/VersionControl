@@ -34,41 +34,38 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.datum_picker = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.jatekos_szama_5 = new System.Windows.Forms.TextBox();
+            this.jatekos_szama_4 = new System.Windows.Forms.TextBox();
+            this.jatekos_szama_3 = new System.Windows.Forms.TextBox();
+            this.jatekos_szama_2 = new System.Windows.Forms.TextBox();
+            this.jatekos_szama_1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.talalatok_szama = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.nyertes_szam_5 = new System.Windows.Forms.TextBox();
+            this.nyertes_szam_4 = new System.Windows.Forms.TextBox();
+            this.nyertes_szam_3 = new System.Windows.Forms.TextBox();
+            this.nyertes_szam_2 = new System.Windows.Forms.TextBox();
+            this.nyertes_szam_1 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.Username_Box = new System.Windows.Forms.ComboBox();
+            this.FULLNAME = new System.Windows.Forms.ComboBox();
+            this.Address_Box = new System.Windows.Forms.ComboBox();
+            this.Phone_Box = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -88,6 +85,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Játszok!";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -106,16 +104,16 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.Phone_Box);
+            this.panel1.Controls.Add(this.Address_Box);
+            this.panel1.Controls.Add(this.FULLNAME);
+            this.panel1.Controls.Add(this.Username_Box);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.dateTimePicker1);
+            this.panel1.Controls.Add(this.datum_picker);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Location = new System.Drawing.Point(21, 38);
@@ -156,13 +154,13 @@
             this.label6.TabIndex = 9;
             this.label6.Text = "Lakcím:";
             // 
-            // dateTimePicker1
+            // datum_picker
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(396, 14);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(219, 22);
-            this.dateTimePicker1.TabIndex = 8;
-            this.dateTimePicker1.Value = new System.DateTime(2020, 12, 12, 0, 0, 0, 0);
+            this.datum_picker.Location = new System.Drawing.Point(396, 14);
+            this.datum_picker.Name = "datum_picker";
+            this.datum_picker.Size = new System.Drawing.Size(219, 22);
+            this.datum_picker.TabIndex = 8;
+            this.datum_picker.Value = new System.DateTime(2020, 12, 12, 0, 0, 0, 0);
             // 
             // label5
             // 
@@ -185,38 +183,6 @@
             this.label4.Size = new System.Drawing.Size(96, 20);
             this.label4.TabIndex = 6;
             this.label4.Text = "Teljes név*:";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox4.Location = new System.Drawing.Point(396, 49);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(219, 27);
-            this.textBox4.TabIndex = 4;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox3.Location = new System.Drawing.Point(109, 89);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(506, 27);
-            this.textBox3.TabIndex = 3;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox2.Location = new System.Drawing.Point(109, 51);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(138, 27);
-            this.textBox2.TabIndex = 2;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox1.Location = new System.Drawing.Point(109, 13);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(138, 27);
-            this.textBox1.TabIndex = 1;
             // 
             // label2
             // 
@@ -243,11 +209,11 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Green;
-            this.panel2.Controls.Add(this.textBox8);
-            this.panel2.Controls.Add(this.textBox7);
-            this.panel2.Controls.Add(this.textBox6);
-            this.panel2.Controls.Add(this.textBox5);
-            this.panel2.Controls.Add(this.textBox10);
+            this.panel2.Controls.Add(this.jatekos_szama_5);
+            this.panel2.Controls.Add(this.jatekos_szama_4);
+            this.panel2.Controls.Add(this.jatekos_szama_3);
+            this.panel2.Controls.Add(this.jatekos_szama_2);
+            this.panel2.Controls.Add(this.jatekos_szama_1);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Location = new System.Drawing.Point(20, 243);
@@ -255,45 +221,45 @@
             this.panel2.Size = new System.Drawing.Size(635, 59);
             this.panel2.TabIndex = 6;
             // 
-            // textBox8
+            // jatekos_szama_5
             // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox8.Location = new System.Drawing.Point(425, 8);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(40, 38);
-            this.textBox8.TabIndex = 5;
+            this.jatekos_szama_5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.jatekos_szama_5.Location = new System.Drawing.Point(425, 8);
+            this.jatekos_szama_5.Name = "jatekos_szama_5";
+            this.jatekos_szama_5.Size = new System.Drawing.Size(40, 38);
+            this.jatekos_szama_5.TabIndex = 5;
             // 
-            // textBox7
+            // jatekos_szama_4
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox7.Location = new System.Drawing.Point(373, 8);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(40, 38);
-            this.textBox7.TabIndex = 4;
+            this.jatekos_szama_4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.jatekos_szama_4.Location = new System.Drawing.Point(373, 8);
+            this.jatekos_szama_4.Name = "jatekos_szama_4";
+            this.jatekos_szama_4.Size = new System.Drawing.Size(40, 38);
+            this.jatekos_szama_4.TabIndex = 4;
             // 
-            // textBox6
+            // jatekos_szama_3
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox6.Location = new System.Drawing.Point(321, 8);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(40, 38);
-            this.textBox6.TabIndex = 3;
+            this.jatekos_szama_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.jatekos_szama_3.Location = new System.Drawing.Point(321, 8);
+            this.jatekos_szama_3.Name = "jatekos_szama_3";
+            this.jatekos_szama_3.Size = new System.Drawing.Size(40, 38);
+            this.jatekos_szama_3.TabIndex = 3;
             // 
-            // textBox5
+            // jatekos_szama_2
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox5.Location = new System.Drawing.Point(269, 8);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(40, 38);
-            this.textBox5.TabIndex = 2;
+            this.jatekos_szama_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.jatekos_szama_2.Location = new System.Drawing.Point(269, 8);
+            this.jatekos_szama_2.Name = "jatekos_szama_2";
+            this.jatekos_szama_2.Size = new System.Drawing.Size(40, 38);
+            this.jatekos_szama_2.TabIndex = 2;
             // 
-            // textBox10
+            // jatekos_szama_1
             // 
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox10.Location = new System.Drawing.Point(217, 8);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(40, 38);
-            this.textBox10.TabIndex = 1;
+            this.jatekos_szama_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.jatekos_szama_1.Location = new System.Drawing.Point(217, 8);
+            this.jatekos_szama_1.Name = "jatekos_szama_1";
+            this.jatekos_szama_1.Size = new System.Drawing.Size(40, 38);
+            this.jatekos_szama_1.TabIndex = 1;
             // 
             // label3
             // 
@@ -328,7 +294,7 @@
             this.panel3.Controls.Add(this.label1);
             this.panel3.Location = new System.Drawing.Point(1, 1);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(697, 700);
+            this.panel3.Size = new System.Drawing.Size(697, 646);
             this.panel3.TabIndex = 8;
             // 
             // label13
@@ -356,60 +322,36 @@
             this.panel4.Controls.Add(this.panel1);
             this.panel4.Location = new System.Drawing.Point(11, 52);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(674, 623);
+            this.panel4.Size = new System.Drawing.Size(674, 569);
             this.panel4.TabIndex = 2;
             // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.Green;
-            this.panel7.Controls.Add(this.label17);
-            this.panel7.Controls.Add(this.label16);
-            this.panel7.Controls.Add(this.label15);
+            this.panel7.Controls.Add(this.talalatok_szama);
             this.panel7.Controls.Add(this.label14);
             this.panel7.Location = new System.Drawing.Point(19, 434);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(635, 65);
             this.panel7.TabIndex = 7;
             // 
-            // label17
+            // talalatok_szama
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Modern No. 20", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label17.Location = new System.Drawing.Point(545, 14);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(33, 30);
-            this.label17.TabIndex = 3;
-            this.label17.Text = "X";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Modern No. 20", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label16.Location = new System.Drawing.Point(232, 14);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(33, 30);
-            this.label16.TabIndex = 2;
-            this.label16.Text = "X";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Modern No. 20", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label15.Location = new System.Drawing.Point(301, 19);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(222, 25);
-            this.label15.TabIndex = 1;
-            this.label15.Text = "Nyereményed összege:";
+            this.talalatok_szama.AutoSize = true;
+            this.talalatok_szama.Font = new System.Drawing.Font("Modern No. 20", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.talalatok_szama.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.talalatok_szama.Location = new System.Drawing.Point(240, 11);
+            this.talalatok_szama.Name = "talalatok_szama";
+            this.talalatok_szama.Size = new System.Drawing.Size(33, 30);
+            this.talalatok_szama.TabIndex = 2;
+            this.talalatok_szama.Text = "X";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Modern No. 20", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label14.Location = new System.Drawing.Point(19, 19);
+            this.label14.Location = new System.Drawing.Point(36, 14);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(184, 25);
             this.label14.TabIndex = 0;
@@ -418,88 +360,76 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel6.Controls.Add(this.button2);
             this.panel6.Controls.Add(this.label12);
             this.panel6.Location = new System.Drawing.Point(21, 184);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(633, 53);
             this.panel6.TabIndex = 9;
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Silver;
-            this.button2.Font = new System.Drawing.Font("Modern No. 20", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(499, 7);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(116, 38);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Szabályzat";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Modern No. 20", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label12.Location = new System.Drawing.Point(5, 15);
+            this.label12.Location = new System.Drawing.Point(156, 17);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(491, 21);
+            this.label12.Size = new System.Drawing.Size(276, 21);
             this.label12.TabIndex = 10;
-            this.label12.Text = "Ha érdekel a nyereményjáték leírása kérlek kattints a gombra.";
+            this.label12.Text = "Sorsolandó számok: 0  és 20 között";
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Chartreuse;
-            this.panel5.Controls.Add(this.textBox9);
-            this.panel5.Controls.Add(this.textBox11);
-            this.panel5.Controls.Add(this.textBox12);
-            this.panel5.Controls.Add(this.textBox13);
-            this.panel5.Controls.Add(this.textBox14);
+            this.panel5.Controls.Add(this.nyertes_szam_5);
+            this.panel5.Controls.Add(this.nyertes_szam_4);
+            this.panel5.Controls.Add(this.nyertes_szam_3);
+            this.panel5.Controls.Add(this.nyertes_szam_2);
+            this.panel5.Controls.Add(this.nyertes_szam_1);
             this.panel5.Controls.Add(this.label10);
             this.panel5.Location = new System.Drawing.Point(20, 308);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(634, 120);
             this.panel5.TabIndex = 7;
             // 
-            // textBox9
+            // nyertes_szam_5
             // 
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox9.Location = new System.Drawing.Point(444, 61);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(40, 38);
-            this.textBox9.TabIndex = 5;
+            this.nyertes_szam_5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.nyertes_szam_5.Location = new System.Drawing.Point(444, 61);
+            this.nyertes_szam_5.Name = "nyertes_szam_5";
+            this.nyertes_szam_5.Size = new System.Drawing.Size(40, 38);
+            this.nyertes_szam_5.TabIndex = 5;
             // 
-            // textBox11
+            // nyertes_szam_4
             // 
-            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox11.Location = new System.Drawing.Point(370, 61);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(40, 38);
-            this.textBox11.TabIndex = 4;
+            this.nyertes_szam_4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.nyertes_szam_4.Location = new System.Drawing.Point(370, 61);
+            this.nyertes_szam_4.Name = "nyertes_szam_4";
+            this.nyertes_szam_4.Size = new System.Drawing.Size(40, 38);
+            this.nyertes_szam_4.TabIndex = 4;
             // 
-            // textBox12
+            // nyertes_szam_3
             // 
-            this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox12.Location = new System.Drawing.Point(296, 61);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(40, 38);
-            this.textBox12.TabIndex = 3;
+            this.nyertes_szam_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.nyertes_szam_3.Location = new System.Drawing.Point(296, 61);
+            this.nyertes_szam_3.Name = "nyertes_szam_3";
+            this.nyertes_szam_3.Size = new System.Drawing.Size(40, 38);
+            this.nyertes_szam_3.TabIndex = 3;
             // 
-            // textBox13
+            // nyertes_szam_2
             // 
-            this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox13.Location = new System.Drawing.Point(222, 61);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(40, 38);
-            this.textBox13.TabIndex = 2;
+            this.nyertes_szam_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.nyertes_szam_2.Location = new System.Drawing.Point(222, 61);
+            this.nyertes_szam_2.Name = "nyertes_szam_2";
+            this.nyertes_szam_2.Size = new System.Drawing.Size(40, 38);
+            this.nyertes_szam_2.TabIndex = 2;
             // 
-            // textBox14
+            // nyertes_szam_1
             // 
-            this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox14.Location = new System.Drawing.Point(148, 61);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(40, 38);
-            this.textBox14.TabIndex = 1;
+            this.nyertes_szam_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.nyertes_szam_1.Location = new System.Drawing.Point(148, 61);
+            this.nyertes_szam_1.Name = "nyertes_szam_1";
+            this.nyertes_szam_1.Size = new System.Drawing.Size(40, 38);
+            this.nyertes_szam_1.TabIndex = 1;
             // 
             // label10
             // 
@@ -512,12 +442,44 @@
             this.label10.TabIndex = 0;
             this.label10.Text = "Kihúzott nyertes számok:";
             // 
+            // Username_Box
+            // 
+            this.Username_Box.FormattingEnabled = true;
+            this.Username_Box.Location = new System.Drawing.Point(113, 15);
+            this.Username_Box.Name = "Username_Box";
+            this.Username_Box.Size = new System.Drawing.Size(137, 24);
+            this.Username_Box.TabIndex = 10;
+            // 
+            // FULLNAME
+            // 
+            this.FULLNAME.FormattingEnabled = true;
+            this.FULLNAME.Location = new System.Drawing.Point(113, 52);
+            this.FULLNAME.Name = "FULLNAME";
+            this.FULLNAME.Size = new System.Drawing.Size(137, 24);
+            this.FULLNAME.TabIndex = 12;
+            // 
+            // Address_Box
+            // 
+            this.Address_Box.FormattingEnabled = true;
+            this.Address_Box.Location = new System.Drawing.Point(113, 88);
+            this.Address_Box.Name = "Address_Box";
+            this.Address_Box.Size = new System.Drawing.Size(502, 24);
+            this.Address_Box.TabIndex = 13;
+            // 
+            // Phone_Box
+            // 
+            this.Phone_Box.FormattingEnabled = true;
+            this.Phone_Box.Location = new System.Drawing.Point(396, 48);
+            this.Phone_Box.Name = "Phone_Box";
+            this.Phone_Box.Size = new System.Drawing.Size(219, 24);
+            this.Phone_Box.TabIndex = 14;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Ivory;
-            this.ClientSize = new System.Drawing.Size(698, 701);
+            this.ClientSize = new System.Drawing.Size(698, 644);
             this.Controls.Add(this.panel3);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -546,42 +508,39 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker datum_picker;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox jatekos_szama_1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox jatekos_szama_5;
+        private System.Windows.Forms.TextBox jatekos_szama_4;
+        private System.Windows.Forms.TextBox jatekos_szama_3;
+        private System.Windows.Forms.TextBox jatekos_szama_2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox nyertes_szam_5;
+        private System.Windows.Forms.TextBox nyertes_szam_4;
+        private System.Windows.Forms.TextBox nyertes_szam_3;
+        private System.Windows.Forms.TextBox nyertes_szam_2;
+        private System.Windows.Forms.TextBox nyertes_szam_1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label talalatok_szama;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ComboBox Phone_Box;
+        private System.Windows.Forms.ComboBox Address_Box;
+        private System.Windows.Forms.ComboBox FULLNAME;
+        private System.Windows.Forms.ComboBox Username_Box;
     }
 }
 
